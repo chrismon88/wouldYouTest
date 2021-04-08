@@ -1,10 +1,10 @@
 <template>
-  <div class="hello">
+  <div class="wyr">
 
     <h2>Please make your choice!</h2>
 
     <h3>{{ question }}</h3>
-
+    <!-- set vmodel and vbind to select only one radio, use value v-bind-->
     <input type="radio" v-model="choice" v-bind:value="answer1" v-on:change="choiceMade">
     <label>{{ answer1 }}</label>
 
@@ -24,11 +24,13 @@ export default {
     answer1: String,
     answer2: String,
   },
+
   data(){
     return{
       choice: ''
     }
   },
+  ///method will display to parent
   methods:{
     choiceMade(){
       this.$emit('answer-changed', this.choice)
@@ -44,8 +46,8 @@ h3 {
 }
 
 .wyr {
-  border: 2px indigo;
-  background: cyan;
+  border: 6px chartreuse;
+  background: indigo;
 }
 
 </style>

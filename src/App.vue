@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Would you rather...</h1>
+    <h1>Would you rather???</h1>
 
     <would-you-rather v-bind:question="wyrQuestion"
     v-bind:answer1="wyrAnswer1"
@@ -21,7 +21,7 @@ export default {
     WouldYouRather
   },
 
-  let app = Vue.createApp({
+
     data(){
       return{
         wyrQuestion: 'Would you rather the aliens that make first contact be robotic or organic?',
@@ -37,17 +37,22 @@ export default {
 
       }
     }
-  })
+
 }
 </script>
 
 <style>
+
+body{
+  background: black;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: beige;
   margin-top: 60px;
+
 }
 </style>
