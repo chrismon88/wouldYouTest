@@ -20,9 +20,7 @@
 export default {
   name: 'WouldYouRather',
   props: {
-    question: String,
-    answer1: String,
-    answer2: String,
+    question: Object
   },
 
   data(){
@@ -33,7 +31,7 @@ export default {
   ///method will display to parent
   methods:{
     choiceMade(){
-      this.$emit('answer-changed', this.choice)
+      this.$emit('answer-changed', this.choice, this.question.id)
     }
   }
 }

@@ -2,12 +2,16 @@
   <div id="app">
     <h1>Would you rather???</h1>
 
-    <would-you-rather v-bind:question="wyrQuestion"
-    v-bind:answer1="wyrAnswer1"
-                      v-bind:answer2="wyrAnswer2"
-    v-on:answer-changed="answerChanged"></would-you-rather>
+    <li v-for="choice in choiceMade"> {{ choice }}</li>
 
-    <p>{{ userSelectionMessage }}</p>
+
+    <would-you-rather
+        v-for="question in questions"
+        v-bind:key="question.id" v-bind:question="question"
+        v-on:answer-changed="answerChanged"
+    >
+
+    </would-you-rather>
 
   </div>
 </template>
