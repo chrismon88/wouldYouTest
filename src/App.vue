@@ -10,7 +10,6 @@
         v-bind:key="question.id" v-bind:question="question"
         v-on:answer-changed="answerChanged"
     >
-
     </would-you-rather>
 
   </div>
@@ -28,11 +27,26 @@ export default {
 
     data(){
       return{
-        wyrQuestion: 'Would you rather the aliens that make first contact be robotic or organic?',
-        wyrAnswer1: 'robotic',
-        wyrAnswer2: 'organic',
-        userSelectionMessage: ''
-
+        questions:[
+          {
+            id:0,
+            question: 'Would you rather the aliens that make first contact be robotic or organic?',
+            answer1: 'robotic',
+            answer2: 'organic',
+          },
+          {
+            id: 1,
+            question: 'Would you rather be able to type/text very fast or be able to read really quickly?',
+            answer1: 'type/text',
+            answer2: 'read quickly'
+          },
+          {
+            id:2,
+            question: 'Would you rather be really good at math or really good at sports?',
+            answer1: 'math',
+            answer2: 'sports',
+          },
+        ]
       }
     },
     methods:{

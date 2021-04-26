@@ -3,14 +3,19 @@
 
     <h2>Please make your choice!</h2>
 
-    <h3>{{ question }}</h3>
+    <h3>{{ question.prompt }}</h3>
     <!-- set vmodel and vbind to select only one radio, use value v-bind-->
-    <input type="radio" v-model="choice" v-bind:value="answer1" v-on:change="choiceMade">
-    <label>{{ answer1 }}</label>
+    <input type="radio"
+    v-model="answerUser.choice"
+    v-bind:value="question.answer1"
+    v-on:change="choiceMade">
+    <label>{{question.answer1}}</label>
 
-    <input type="radio" v-model="choice" v-bind:value="answer2" v-on:change="choiceMade">
-    <label>{{ answer2 }}</label>
-
+    <input type="radio"
+           v-model="answerUser.choice"
+           v-bind:value="question.answer2"
+           v-on:change="choiceMade">
+    <label>{{question.answer2}}</label>
 
 
   </div>
@@ -24,9 +29,9 @@ export default {
   },
 
   data(){
-    return{
-      choice: ''
-    }
+    return {
+        choice: ''
+      }
   },
   ///method will display to parent
   methods:{
